@@ -17,7 +17,7 @@ ENV KC_DB=postgres
 ENV KC_PROXY=edge
 
 # hostname pubblico (Render lo sovrascrive da env KC_HOSTNAME)
-ENV KC_HOSTNAME=your-keycloak.onrender.com
+ENV KC_HOSTNAME=keycloak-server.onrender.com
 
 # build ottimizzata (OBBLIGATORIO per production mode)
 RUN /opt/keycloak/bin/kc.sh build
