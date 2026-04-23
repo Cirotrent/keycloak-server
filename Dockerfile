@@ -16,11 +16,13 @@ ENV KC_DB=postgres
 # IMPORTANTE: per Render serve proxy edge
 ENV KC_PROXY=edge
 
+EXPOSE 8081
+
 # hostname pubblico (Render lo sovrascrive da env KC_HOSTNAME)
-ENV KC_HOSTNAME=localhost
+ENV KC_HOSTNAME=your-keycloak.onrender.com
 
 # build ottimizzata (OBBLIGATORIO per production mode)
 RUN /opt/keycloak/bin/kc.sh build
 
 # avvio con import automatico realm
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "--http-enabled=true", "--hostname-strict=false","--http-port=8080"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "--http-enabled=true", "--hostname-strict=false","--http-port=8081"]
