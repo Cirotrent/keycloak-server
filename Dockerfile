@@ -20,4 +20,4 @@ ENV KC_HOSTNAME=localhost
 RUN /opt/keycloak/bin/kc.sh build
 
 # avvio con import automatico realm
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "--http-enabled=true", "--hostname-strict=false"]
