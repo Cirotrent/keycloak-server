@@ -23,4 +23,4 @@ ENV KC_HOSTNAME=your-keycloak.onrender.com
 RUN /opt/keycloak/bin/kc.sh build
 
 # avvio con import automatico realm
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "--http-enabled=true", "--hostname-strict=false","--http-port=10000"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm"]
