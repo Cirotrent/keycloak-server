@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:25.0.6
+FROM quay.io/keycloak/keycloak:26.6.0
 
 # Copia il realm export dentro il container
 COPY realm-export.json /opt/keycloak/data/import/
