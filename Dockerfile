@@ -7,6 +7,9 @@ COPY realm-export.json /opt/keycloak/data/import/
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
+ENV KC_BOOTSTRAP_ADMIN_USERNAME=admin
+ENV KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+
 # Database (sarà sovrascritto da Render env vars)
 ENV KC_DB=postgres
 
